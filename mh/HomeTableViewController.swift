@@ -12,7 +12,8 @@ class HomeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        self.tableView.separatorStyle = .None
+        
     }
 
     override func didReceiveMemoryWarning() {
