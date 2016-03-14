@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import Kingfisher
+import Kingfisher
 
 import Log
 
@@ -33,8 +33,9 @@ extension HomeTableViewCell : UICollectionViewDataSource{
 //        print("https://o40cqejff.qnssl.com/img\(indexPath.row).jpg")
         
 //        cell.movieImage.kf_setImageWithURL(NSURL(string: "https://o40cqejff.qnssl.com/img\(indexPath.row).jpg")!, placeholderImage: Image(named: "img3"))
-        
+//        
     
+        cell.movieImage.kf_setImageWithURL(NSURL(string: "https://o40cqejff.qnssl.com/img\(indexPath.row).jpg")!, placeholderImage: UIImage(named: "img3"))
         
         
         return cell
