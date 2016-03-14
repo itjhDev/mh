@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Kingfisher.xcscheme</key>
+		<key>Log.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>175892047F5D57D69AC9D102FB92A2F2</key>
+		<key>0421E0DD4FC8F4C02100C2F5452FB6F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>24EAC93F6F37B6E134AE12A2A0511FAF</key>
+		<key>E3BC8E6BF7F9B0379CCBAF6CE281BB9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

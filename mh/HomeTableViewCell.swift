@@ -7,6 +7,9 @@
 //
 
 import UIKit
+//import Kingfisher
+
+import Log
 
 class HomeTableViewCell: UITableViewCell {
     
@@ -22,8 +25,17 @@ extension HomeTableViewCell : UICollectionViewDataSource{
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("movieCell", forIndexPath: indexPath) as! MovieCollectionViewCell
-        
+      
 //        cell.movieImage.image = UIImage(named: "img\(indexPath.row)")
+        
+        Log.info("https://o40cqejff.qnssl.com/img\(indexPath.row).jpg")
+        
+//        print("https://o40cqejff.qnssl.com/img\(indexPath.row).jpg")
+        
+//        cell.movieImage.kf_setImageWithURL(NSURL(string: "https://o40cqejff.qnssl.com/img\(indexPath.row).jpg")!, placeholderImage: Image(named: "img3"))
+        
+    
+        
         
         return cell
     }
@@ -38,7 +50,7 @@ extension HomeTableViewCell : UICollectionViewDelegateFlowLayout {
         let hardCodedPadding:CGFloat = 5
 //        let itemWidth = (collectionView.bounds.width / itemsPerRow) - hardCodedPadding
         
-    
+
         
         let itemWidth:CGFloat = 124
 

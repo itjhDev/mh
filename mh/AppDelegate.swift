@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Log
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Log.enabled = true
+        Log.formatter = .Default
+        Log.theme = .Dusk
+        
+        
         return true
     }
 

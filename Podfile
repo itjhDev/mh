@@ -4,7 +4,10 @@ use_frameworks!
 
 def mh_ios 
     
-    pod 'Kingfisher'
+#    pod 'Kingfisher'
+
+
+    pod 'Log'
 
 end
 
