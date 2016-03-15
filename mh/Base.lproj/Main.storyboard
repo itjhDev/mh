@@ -2,9 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PSg-nV-aXA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </mutableArray>
         <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
         </mutableArray>
@@ -51,20 +56,20 @@
         <scene sceneID="EEe-N6-BL8">
             <objects>
                 <tableViewController id="rm4-jq-JNA" customClass="HomeTableViewController" customModule="mh" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="249" sectionHeaderHeight="28" sectionFooterHeight="28" id="UDF-aM-eMK">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="304" sectionHeaderHeight="28" sectionFooterHeight="28" id="UDF-aM-eMK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="homeTableViewCell" rowHeight="239" id="tlL-j3-Hrf" customClass="HomeTableViewCell" customModule="mh" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="239"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="homeTableViewCell" rowHeight="304" id="tlL-j3-Hrf" customClass="HomeTableViewCell" customModule="mh" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="304"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tlL-j3-Hrf" id="ytJ-N3-QZd">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="238.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="303.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-At-u03">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="238.5"/>
+                                            <rect key="frame" x="0.0" y="65" width="600" height="238.5"/>
                                             <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <inset key="scrollIndicatorInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C83-iR-uEm">
@@ -113,10 +118,29 @@
                                                 <outlet property="delegate" destination="tlL-j3-Hrf" id="OsY-c7-YeW"/>
                                             </connections>
                                         </collectionView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUg-gI-7Do">
+                                            <rect key="frame" x="8" y="27" width="40.5" height="21"/>
+                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                                            <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjJ-1J-R7v">
+                                            <rect key="frame" x="544" y="23" width="48" height="30"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="12"/>
+                                            <state key="normal" title="显示更多">
+                                                <color key="titleColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="u8T-At-u03" firstAttribute="top" secondItem="ytJ-N3-QZd" secondAttribute="top" id="Esj-CX-uGj"/>
+                                        <constraint firstItem="RjJ-1J-R7v" firstAttribute="top" secondItem="ytJ-N3-QZd" secondAttribute="top" constant="23" id="6pg-Hd-r2L"/>
+                                        <constraint firstItem="u8T-At-u03" firstAttribute="top" secondItem="RjJ-1J-R7v" secondAttribute="bottom" constant="12" id="C1a-oL-3Mk"/>
+                                        <constraint firstAttribute="trailing" secondItem="RjJ-1J-R7v" secondAttribute="trailing" constant="8" id="CGb-BD-1Tx"/>
+                                        <constraint firstItem="u8T-At-u03" firstAttribute="top" secondItem="ytJ-N3-QZd" secondAttribute="top" constant="65" id="Esj-CX-uGj"/>
+                                        <constraint firstItem="QUg-gI-7Do" firstAttribute="leading" secondItem="ytJ-N3-QZd" secondAttribute="leadingMargin" id="FNM-9w-8qc"/>
+                                        <constraint firstItem="u8T-At-u03" firstAttribute="top" secondItem="QUg-gI-7Do" secondAttribute="bottom" constant="17" id="RMI-26-cQI"/>
                                         <constraint firstAttribute="trailing" secondItem="u8T-At-u03" secondAttribute="trailing" id="Y1q-W1-INI"/>
+                                        <constraint firstItem="QUg-gI-7Do" firstAttribute="top" secondItem="ytJ-N3-QZd" secondAttribute="topMargin" constant="19" id="ago-vt-Ryl"/>
                                         <constraint firstItem="u8T-At-u03" firstAttribute="leading" secondItem="ytJ-N3-QZd" secondAttribute="leading" id="kFd-QN-BCZ"/>
                                         <constraint firstAttribute="bottom" secondItem="u8T-At-u03" secondAttribute="bottom" id="sWc-3W-CAH"/>
                                     </constraints>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB2F9F391C98294A00047520 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2F9F381C98294A00047520 /* UIColor+Extension.swift */; };
 		AB3BC8361C929EDD002FCBB4 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BC8351C929EDD002FCBB4 /* HomeTableViewController.swift */; };
 		AB3BC8391C929F66002FCBB4 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BC8381C929F66002FCBB4 /* HomeTableViewCell.swift */; };
 		AB3BC83B1C929FDA002FCBB4 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BC83A1C929FDA002FCBB4 /* MovieCollectionViewCell.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		35E3B5AFF9296F6259855AAD /* Pods_mh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1657AB89DCC704AE8EC425 /* Pods-mh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mh/Pods-mh.debug.xcconfig"; sourceTree = "<group>"; };
+		AB2F9F381C98294A00047520 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		AB3BC8351C929EDD002FCBB4 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		AB3BC8381C929F66002FCBB4 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		AB3BC83A1C929FDA002FCBB4 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -133,11 +135,12 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
-		AB626BCD1C9673CD0017239B /* New Group */ = {
+		AB626BCD1C9673CD0017239B /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				AB2F9F381C98294A00047520 /* UIColor+Extension.swift */,
 			);
-			name = "New Group";
+			name = Util;
 			sourceTree = "<group>";
 		};
 		AB626BCE1C9673D80017239B /* Fonts */ = {
@@ -176,7 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				AB626BCC1C96739D0017239B /* Resource */,
-				AB626BCD1C9673CD0017239B /* New Group */,
+				AB626BCD1C9673CD0017239B /* Util */,
 				AB3BC8371C929F2A002FCBB4 /* View */,
 				AB3BC8341C929EBF002FCBB4 /* Controller */,
 				ABAD63AB1C90163D00067484 /* AppDelegate.swift */,
@@ -396,6 +399,7 @@
 				AB3BC8361C929EDD002FCBB4 /* HomeTableViewController.swift in Sources */,
 				ABAD63AE1C90163D00067484 /* ViewController.swift in Sources */,
 				AB3BC83B1C929FDA002FCBB4 /* MovieCollectionViewCell.swift in Sources */,
+				AB2F9F391C98294A00047520 /* UIColor+Extension.swift in Sources */,
 				AB3BC8391C929F66002FCBB4 /* HomeTableViewCell.swift in Sources */,
 				ABAD63AC1C90163D00067484 /* AppDelegate.swift in Sources */,
 			);
