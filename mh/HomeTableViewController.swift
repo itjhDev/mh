@@ -9,23 +9,21 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
-    
- 
+
 	let headNames = ["新品推荐", "新增电影", "热门电影"]
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		    }
-    
-    
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-       
-        self.tableView.separatorStyle = .None
         
-    }
-    
+        
+	}
+
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+
+		self.tableView.separatorStyle = .None
+        
+	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -51,5 +49,4 @@ class HomeTableViewController: UITableViewController {
 
 		return cell
 	}
-    
 }
