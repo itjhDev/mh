@@ -13,6 +13,7 @@ import Log
 
 class HomeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var groupName: UILabel!
 	@IBOutlet weak var collectionView: UICollectionView!
 }
 

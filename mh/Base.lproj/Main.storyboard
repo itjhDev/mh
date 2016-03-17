@@ -115,36 +115,43 @@
                                                 <outlet property="delegate" destination="tlL-j3-Hrf" id="OsY-c7-YeW"/>
                                             </connections>
                                         </collectionView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjJ-1J-R7v">
-                                            <rect key="frame" x="534" y="40" width="48" height="17"/>
-                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
-                                            <state key="normal" title="显示更多">
-                                                <color key="titleColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUg-gI-7Do">
-                                            <rect key="frame" x="14" y="36" width="40.5" height="21"/>
+                                            <rect key="frame" x="8" y="27" width="40.5" height="21"/>
                                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more_than" translatesAutoresizingMaskIntoConstraints="NO" id="I2S-Wn-Oho">
+                                            <rect key="frame" x="558" y="31" width="20" height="17"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjJ-1J-R7v">
+                                            <rect key="frame" x="515" y="32" width="48" height="14"/>
+                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                            <state key="normal" title="显示全部">
+                                                <color key="titleColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="RjJ-1J-R7v" firstAttribute="top" secondItem="ytJ-N3-QZd" secondAttribute="top" constant="40" id="6pg-Hd-r2L"/>
-                                        <constraint firstItem="u8T-At-u03" firstAttribute="top" secondItem="RjJ-1J-R7v" secondAttribute="bottom" constant="8" id="C1a-oL-3Mk"/>
-                                        <constraint firstAttribute="trailing" secondItem="RjJ-1J-R7v" secondAttribute="trailing" constant="18" id="CGb-BD-1Tx"/>
+                                        <constraint firstItem="RjJ-1J-R7v" firstAttribute="top" secondItem="ytJ-N3-QZd" secondAttribute="top" constant="32" id="6pg-Hd-r2L"/>
+                                        <constraint firstItem="u8T-At-u03" firstAttribute="top" secondItem="RjJ-1J-R7v" secondAttribute="bottom" constant="19" id="C1a-oL-3Mk"/>
                                         <constraint firstItem="u8T-At-u03" firstAttribute="top" secondItem="ytJ-N3-QZd" secondAttribute="top" constant="65" id="Esj-CX-uGj"/>
-                                        <constraint firstItem="QUg-gI-7Do" firstAttribute="leading" secondItem="ytJ-N3-QZd" secondAttribute="leadingMargin" constant="6" id="FNM-9w-8qc"/>
-                                        <constraint firstItem="u8T-At-u03" firstAttribute="top" secondItem="QUg-gI-7Do" secondAttribute="bottom" constant="8" id="RMI-26-cQI"/>
+                                        <constraint firstItem="QUg-gI-7Do" firstAttribute="leading" secondItem="ytJ-N3-QZd" secondAttribute="leadingMargin" id="FNM-9w-8qc"/>
+                                        <constraint firstItem="u8T-At-u03" firstAttribute="top" secondItem="QUg-gI-7Do" secondAttribute="bottom" constant="17" id="RMI-26-cQI"/>
+                                        <constraint firstItem="I2S-Wn-Oho" firstAttribute="leading" secondItem="RjJ-1J-R7v" secondAttribute="trailing" constant="-5" id="X6I-kE-kL8"/>
                                         <constraint firstAttribute="trailing" secondItem="u8T-At-u03" secondAttribute="trailing" id="Y1q-W1-INI"/>
-                                        <constraint firstItem="QUg-gI-7Do" firstAttribute="top" secondItem="ytJ-N3-QZd" secondAttribute="topMargin" constant="28" id="ago-vt-Ryl"/>
+                                        <constraint firstAttribute="trailing" secondItem="I2S-Wn-Oho" secondAttribute="trailing" constant="22" id="ZVq-1I-uao"/>
+                                        <constraint firstItem="QUg-gI-7Do" firstAttribute="top" secondItem="ytJ-N3-QZd" secondAttribute="topMargin" constant="19" id="ago-vt-Ryl"/>
                                         <constraint firstItem="u8T-At-u03" firstAttribute="leading" secondItem="ytJ-N3-QZd" secondAttribute="leading" id="kFd-QN-BCZ"/>
+                                        <constraint firstItem="u8T-At-u03" firstAttribute="top" secondItem="I2S-Wn-Oho" secondAttribute="bottom" constant="17" id="rcY-Kh-Aou"/>
                                         <constraint firstAttribute="bottom" secondItem="u8T-At-u03" secondAttribute="bottom" id="sWc-3W-CAH"/>
+                                        <constraint firstItem="I2S-Wn-Oho" firstAttribute="top" secondItem="ytJ-N3-QZd" secondAttribute="top" constant="31" id="vjd-Fa-VAE"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="collectionView" destination="u8T-At-u03" id="HwZ-G5-J0p"/>
+                                    <outlet property="groupName" destination="QUg-gI-7Do" id="T7h-ax-2Cs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -280,5 +287,6 @@
     </scenes>
     <resources>
         <image name="jgl600x849" width="600" height="849"/>
+        <image name="more_than" width="20" height="20"/>
     </resources>
 </document>

@@ -46,6 +46,8 @@ class HomeTableViewController: UITableViewController {
 		let cell = tableView.dequeueReusableCellWithIdentifier("homeTableViewCell", forIndexPath: indexPath) as! HomeTableViewCell
 
 		// Configure the cell...
+        
+        cell.groupName.text = headNames[indexPath.section]
 
 		return cell
 	}
