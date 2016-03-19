@@ -14,15 +14,12 @@ class HomeTableViewController: UITableViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        
-        
 	}
 
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
 
 		self.tableView.separatorStyle = .None
-        
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -30,6 +27,9 @@ class HomeTableViewController: UITableViewController {
 		// Dispose of any resources that can be recreated.
 	}
 
+}
+
+extension HomeTableViewController {
 	// MARK: - Table view data source
 
 	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -41,14 +41,15 @@ class HomeTableViewController: UITableViewController {
 		// #warning Incomplete implementation, return the number of rows
 		return 1
 	}
-
-	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("homeTableViewCell", forIndexPath: indexPath) as! HomeTableViewCell
-
-		// Configure the cell...
+	
+    
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("homeTableViewCell", forIndexPath: indexPath) as! HomeTableViewCell
         
+        // Configure the cell...
         cell.groupName.text = headNames[indexPath.section]
-
-		return cell
-	}
+        
+        return cell
+    }
 }
