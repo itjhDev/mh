@@ -27,7 +27,7 @@ class HomeTableViewController: UITableViewController, CirCleViewDelegate {
 
         self.tableView.separatorStyle = .None
 
-        let urlImageArray: [String] = ["https://o449xphwj.qnssl.com/0510000056D3F5666714C00779085EBC.jpeg", "https://o449xphwj.qnssl.com/0510000056D01C4D6714C0018A0C3432.jpeg"]
+        let urlImageArray: [String] = ["https://o449xphwj.qnssl.com/0510000056D3F5666714C00779085EBC.jpeg", "https://o449xphwj.qnssl.com/0510000056D01C4D6714C0018A0C3432.jpeg","https://o449xphwj.qnssl.com/0510000056EBAE8B6714C027620C0F72.jpeg"]
 
         self.circleView = CirCleView(frame: CGRectMake(0, 64, self.view.frame.size.width, 200), urlImageArray: urlImageArray)
 
