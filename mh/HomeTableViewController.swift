@@ -16,25 +16,28 @@ class HomeTableViewController: UITableViewController, CirCleViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
         self.tableView.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)
-
+        
         Log.info(self.tableView.frame)
-
+        
         self.tableView.separatorStyle = .None
-
+        
         let urlImageArray: [String] = ["https://o449xphwj.qnssl.com/0510000056D3F5666714C00779085EBC.jpeg", "https://o449xphwj.qnssl.com/0510000056D01C4D6714C0018A0C3432.jpeg","https://o449xphwj.qnssl.com/0510000056EBAE8B6714C027620C0F72.jpeg"]
-
-        self.circleView = CirCleView(frame: CGRectMake(0, 64, self.view.frame.size.width, 200), urlImageArray: urlImageArray)
-
+        
+        circleView = CirCleView(frame: CGRectMake(0, 64, self.view.frame.size.width, 200), imageArrayUrlStr: urlImageArray )
+        
         circleView.backgroundColor = UIColor.orangeColor()
         circleView.delegate = self
-        
         self.tableView.tableHeaderView = circleView
+
+
+        
     }
 
     override func didReceiveMemoryWarning() {

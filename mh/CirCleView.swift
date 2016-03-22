@@ -8,7 +8,7 @@
 
 import UIKit
 
-let TimeInterval = 2.5 // 全局的时间间隔
+let TimeInterval = 3.5 // 全局的时间间隔
 
 class CirCleView: UIView, UIScrollViewDelegate {
     /*********************************** Property ****************************************/
@@ -51,6 +51,8 @@ class CirCleView: UIView, UIScrollViewDelegate {
         }
     }
 
+    var imageArrayUrlStr = [String]()
+
     var delegate: CirCleViewDelegate?
 
     var indexOfCurrentImage: Int! { // 当前显示的第几张图片
@@ -83,13 +85,21 @@ class CirCleView: UIView, UIScrollViewDelegate {
         self.setUpCircleView()
     }
 
+    convenience init(frame: CGRect, imageArrayUrlStr: [String]) {
+        self.init(frame: frame)
+        self.imageArrayUrlStr = imageArrayUrlStr
+
+        // 默认显示第一张图片
+        self.indexOfCurrentImage = 0
+        self.setUpCircleView()
+    }
+
     convenience init(frame: CGRect, urlImageArray: [String]?) {
         self.init(frame: frame)
 
         self.urlImageArray = urlImageArray
 
         self.imageArray = []
-
         for urlStr in urlImageArray! {
             let urlImage = NSURL(string: urlStr)
             if urlImage == nil { break }
@@ -97,9 +107,9 @@ class CirCleView: UIView, UIScrollViewDelegate {
             if dataImage == nil { break }
             let tempImage = UIImage(data: dataImage!)
             if tempImage == nil { break }
+
             imageArray.append(tempImage)
         }
-
         // 默认显示第一张图片
         self.indexOfCurrentImage = 0
         self.setUpCircleView()
@@ -112,6 +122,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
     /********************************** Privite Methods ***************************************/
     // MARK:- Privite Methods
     private func setUpCircleView() {
+
         self.contentScrollView = UIScrollView(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height))
         contentScrollView.contentSize = CGSizeMake(self.frame.size.width * 3, 0)
         contentScrollView.delegate = self
@@ -119,7 +130,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
         contentScrollView.pagingEnabled = true
         contentScrollView.backgroundColor = UIColor.greenColor()
         contentScrollView.showsHorizontalScrollIndicator = false
-        contentScrollView.scrollEnabled = !(imageArray.count == 1)
+        contentScrollView.scrollEnabled = !(imageArrayUrlStr.count == 1)
         self.addSubview(contentScrollView)
 
         self.currentImageView = UIImageView()
@@ -146,12 +157,13 @@ class CirCleView: UIView, UIScrollViewDelegate {
         contentScrollView.addSubview(nextImageView)
 
         self.setScrollViewOfImage()
+
         contentScrollView.setContentOffset(CGPointMake(self.frame.size.width, 0), animated: false)
 
         // 设置分页指示器
-        self.pageIndicator = UIPageControl(frame: CGRectMake(self.frame.size.width - 20 * CGFloat(imageArray.count), self.frame.size.height - 30, 20 * CGFloat(imageArray.count), 20))
+        self.pageIndicator = UIPageControl(frame: CGRectMake(self.frame.size.width - 20 * CGFloat(imageArrayUrlStr.count), self.frame.size.height - 30, 20 * CGFloat(imageArrayUrlStr.count), 20))
         pageIndicator.hidesForSinglePage = true
-        pageIndicator.numberOfPages = imageArray.count
+        pageIndicator.numberOfPages = imageArrayUrlStr.count
         pageIndicator.backgroundColor = UIColor.clearColor()
 //        self.addSubview(pageIndicator)
 
@@ -161,16 +173,26 @@ class CirCleView: UIView, UIScrollViewDelegate {
 
     // MARK: 设置图片
     private func setScrollViewOfImage() {
-        self.currentImageView.image = self.imageArray[self.indexOfCurrentImage]
-        self.nextImageView.image = self.imageArray[self.getNextImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)]
-        self.lastImageView.image = self.imageArray[self.getLastImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)]
+//        self.currentImageView.image = self.imageArray[self.indexOfCurrentImage]
+//
+//        self.nextImageView.image = self.imageArray[self.getNextImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)]
+//        self.lastImageView.image = self.imageArray[self.getLastImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)]
+        // 重置计时器
+        if timer == nil {
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+        }
+        self.currentImageView.kf_setImageWithURL(NSURL(string: self.imageArrayUrlStr[self.indexOfCurrentImage])!)
+
+        self.nextImageView.kf_setImageWithURL(NSURL(string: self.imageArrayUrlStr[self.getNextImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)])!)
+
+        self.lastImageView.kf_setImageWithURL(NSURL(string: self.imageArrayUrlStr[self.getLastImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)])!)
     }
 
     // 得到上一张图片的下标
     private func getLastImageIndex(indexOfCurrentImage index: Int) -> Int {
         let tempIndex = index - 1
         if tempIndex == -1 {
-            return self.imageArray.count - 1
+            return self.imageArrayUrlStr.count - 1
         } else {
             return tempIndex
         }
@@ -180,7 +202,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
     private func getNextImageIndex(indexOfCurrentImage index: Int) -> Int
     {
         let tempIndex = index + 1
-        return tempIndex < self.imageArray.count ? tempIndex : 0
+        return tempIndex < self.imageArrayUrlStr.count ? tempIndex : 0
     }
 
     // 事件触发方法
@@ -232,12 +254,13 @@ class CirCleView: UIView, UIScrollViewDelegate {
 
     // 时间触发器 设置滑动时动画true，会触发的方法
     func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
+//        print("animator", terminator: "")
         self.scrollViewDidEndDecelerating(contentScrollView)
     }
 }
 
 /********************************** Protocol Methods ***************************************/
-//MARK:- Protocol Methods
+// MARK:- Protocol Methods
 
 @objc protocol CirCleViewDelegate {
     /**
@@ -247,4 +270,3 @@ class CirCleView: UIView, UIScrollViewDelegate {
      */
     optional func clickCurrentImage(currentIndxe: Int)
 }
-
