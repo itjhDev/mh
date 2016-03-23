@@ -1,6 +1,5 @@
 PODS:
-  - Kingfisher (2.1.0)
-  - Log (0.2)
+  - Log (0.2.1)
   - SDCycleScrollView (1.61):
     - SDWebImage (~> 3.7)
   - SDWebImage (3.7.5):
@@ -8,16 +7,14 @@ PODS:
   - SDWebImage/Core (3.7.5)
 
 DEPENDENCIES:
-  - Kingfisher
   - Log
   - SDCycleScrollView
 
 SPEC CHECKSUMS:
-  Kingfisher: 3ac09acad75a25ab22f6d7cef3de10d61dd4792d
-  Log: 5072b3f13180b8dc89b466c2b0f0466c03b8df07
+  Log: b97ca4e92642f49600ea4dddfd3e238ca14a3b7a
   SDCycleScrollView: a002d85b30cfa9d0ac74069cd3973ca19ff4f22f
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
 
-PODFILE CHECKSUM: e227eb59e250a2038de6cf314f431766e1b5aa21
+PODFILE CHECKSUM: 9df5342af26be237356712d3fc7691f9605d5fb4
 
 COCOAPODS: 1.0.0.beta.4

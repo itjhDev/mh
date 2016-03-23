@@ -6,8 +6,8 @@
 //  Copyright © 2016年 itjh. All rights reserved.
 //
 
-import UIKit
-import Kingfisher
+import UIKit 
+import SDWebImage
 
 import Log
 
@@ -27,8 +27,11 @@ extension HomeTableViewCell: UICollectionViewDataSource {
 		let cell = collectionView.dequeueReusableCellWithReuseIdentifier("movieCell", forIndexPath: indexPath) as! MovieCollectionViewCell
         
 		Log.info("https://o449xphwj.qnssl.com/img\(indexPath.row).jpg")
-
-		cell.movieImage.kf_setImageWithURL(NSURL(string: "https://o449xphwj.qnssl.com/img\(indexPath.row).jpg")!, placeholderImage: UIImage(named: "img3"))
+        
+        
+        cell.movieImage.setImageWithURL(NSURL(string: "https://o449xphwj.qnssl.com/img\(indexPath.row).jpg")!, placeholderImage: UIImage(named: "img3"))
+ 
+        
 
 		return cell
 	}

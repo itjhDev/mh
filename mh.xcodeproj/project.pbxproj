@@ -14,7 +14,6 @@
 		AB626BD21C9673D80017239B /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB626BCF1C9673D80017239B /* OpenSans-Light.ttf */; };
 		AB626BD31C9673D80017239B /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB626BD01C9673D80017239B /* OpenSans-Regular.ttf */; };
 		AB626BD41C9673D80017239B /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB626BD11C9673D80017239B /* OpenSans-Semibold.ttf */; };
-		AB865D2B1C9FD21C004666FD /* CirCleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB865D2A1C9FD21C004666FD /* CirCleView.swift */; };
 		ABAD63AC1C90163D00067484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAD63AB1C90163D00067484 /* AppDelegate.swift */; };
 		ABAD63AE1C90163D00067484 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAD63AD1C90163D00067484 /* ViewController.swift */; };
 		ABAD63B11C90163D00067484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAD63AF1C90163D00067484 /* Main.storyboard */; };
@@ -52,7 +51,6 @@
 		AB626BCF1C9673D80017239B /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		AB626BD01C9673D80017239B /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		AB626BD11C9673D80017239B /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
-		AB865D2A1C9FD21C004666FD /* CirCleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirCleView.swift; sourceTree = "<group>"; };
 		ABAD63A81C90163D00067484 /* mh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAD63AB1C90163D00067484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABAD63AD1C90163D00067484 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 		AB626BCD1C9673CD0017239B /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				AB865D2A1C9FD21C004666FD /* CirCleView.swift */,
 				AB2F9F381C98294A00047520 /* UIColor+Extension.swift */,
 				ABD5AF591CA11A53003C06E2 /* mh-Bridging-Header.h */,
 			);
@@ -402,7 +399,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB3BC8361C929EDD002FCBB4 /* HomeTableViewController.swift in Sources */,
-				AB865D2B1C9FD21C004666FD /* CirCleView.swift in Sources */,
 				ABAD63AE1C90163D00067484 /* ViewController.swift in Sources */,
 				AB3BC83B1C929FDA002FCBB4 /* MovieCollectionViewCell.swift in Sources */,
 				AB2F9F391C98294A00047520 /* UIColor+Extension.swift in Sources */,

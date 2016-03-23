@@ -3,3 +3,5 @@
 //
 
 #import <SDCycleScrollView/SDCycleScrollView.h>
+
+#import <SDWebImage/UIImageView+WebCache.h>

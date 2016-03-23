@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Kingfisher.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Log.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,22 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>161501F176A9E26BF5A2CFBEF8F7CA29</key>
+		<key>8170527D730359666E0F3266D5B03D30</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1B379C09A01AB5431127E9175B1DB2DC</key>
+		<key>D86AED0190BB36F2A5893DE721E04010</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B6548158BD663B303E702CBA6A74601</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F91226101ECE8FCFD221A3EC54481F82</key>
+		<key>F2A8F1BAE26A130C52A22CA8F9C521A6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -10,10 +10,9 @@ import UIKit
 import Log
 import SDCycleScrollView
 
-class HomeTableViewController: UITableViewController, CirCleViewDelegate,SDCycleScrollViewDelegate {
+class HomeTableViewController: UITableViewController,  SDCycleScrollViewDelegate {
 
     let headNames = ["新品推荐", "新增电影", "热门电影"]
-    var circleView: CirCleView!
     
     var tableHeardView = SDCycleScrollView()
 
@@ -34,12 +33,7 @@ class HomeTableViewController: UITableViewController, CirCleViewDelegate,SDCycle
         
         let urlImageArray: [String] = ["https://o449xphwj.qnssl.com/0510000056D3F5666714C00779085EBC.jpeg", "https://o449xphwj.qnssl.com/0510000056D01C4D6714C0018A0C3432.jpeg","https://o449xphwj.qnssl.com/0510000056EBAE8B6714C027620C0F72.jpeg"]
         
-//        circleView = CirCleView(frame: CGRectMake(0, 64, self.view.frame.size.width, 200), imageArrayUrlStr: urlImageArray )
-//        
-//        circleView.backgroundColor = UIColor.orangeColor()
-//        circleView.delegate = self
-//        self.tableView.tableHeaderView = circleView
-        
+
         
         tableHeardView = SDCycleScrollView(frame: CGRectMake(0, 64, self.view.frame.size.width, 200))
         
