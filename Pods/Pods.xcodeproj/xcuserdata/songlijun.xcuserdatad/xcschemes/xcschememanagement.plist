@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDCycleScrollView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -27,7 +37,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7F45FCEA22060A77B18122960D427276</key>
+		<key>161501F176A9E26BF5A2CFBEF8F7CA29</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1B379C09A01AB5431127E9175B1DB2DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2B6548158BD663B303E702CBA6A74601</key>
 		<dict>
 			<key>primary</key>
 			<true/>

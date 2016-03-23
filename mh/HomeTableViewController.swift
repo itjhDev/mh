@@ -8,11 +8,15 @@
 
 import UIKit
 import Log
+import SDCycleScrollView
 
-class HomeTableViewController: UITableViewController, CirCleViewDelegate {
+class HomeTableViewController: UITableViewController, CirCleViewDelegate,SDCycleScrollViewDelegate {
 
     let headNames = ["新品推荐", "新增电影", "热门电影"]
     var circleView: CirCleView!
+    
+    var tableHeardView = SDCycleScrollView()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +34,33 @@ class HomeTableViewController: UITableViewController, CirCleViewDelegate {
         
         let urlImageArray: [String] = ["https://o449xphwj.qnssl.com/0510000056D3F5666714C00779085EBC.jpeg", "https://o449xphwj.qnssl.com/0510000056D01C4D6714C0018A0C3432.jpeg","https://o449xphwj.qnssl.com/0510000056EBAE8B6714C027620C0F72.jpeg"]
         
-        circleView = CirCleView(frame: CGRectMake(0, 64, self.view.frame.size.width, 200), imageArrayUrlStr: urlImageArray )
+//        circleView = CirCleView(frame: CGRectMake(0, 64, self.view.frame.size.width, 200), imageArrayUrlStr: urlImageArray )
+//        
+//        circleView.backgroundColor = UIColor.orangeColor()
+//        circleView.delegate = self
+//        self.tableView.tableHeaderView = circleView
         
-        circleView.backgroundColor = UIColor.orangeColor()
-        circleView.delegate = self
-        self.tableView.tableHeaderView = circleView
-
+        
+        tableHeardView = SDCycleScrollView(frame: CGRectMake(0, 64, self.view.frame.size.width, 200))
+        
+        
+        tableHeardView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
+        tableHeardView.delegate = self;
+        
+        
+        tableHeardView.placeholderImage = UIImage(named: "tutorial_background_03")
+        tableHeardView.autoScrollTimeInterval = 5
+        
+        tableHeardView.imageURLStringsGroup = urlImageArray
+                self.tableView.tableHeaderView = tableHeardView
 
         
+    }
+    
+    
+    func cycleScrollView(cycleScrollView: SDCycleScrollView!, didSelectItemAtIndex index: Int) {
+    
+        Log.info("点击了\(index)")
     }
 
     override func didReceiveMemoryWarning() {

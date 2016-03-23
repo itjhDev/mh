@@ -66,6 +66,7 @@
 		ABAD63C71C90163D00067484 /* mhUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mhUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAD63CB1C90163D00067484 /* mhUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mhUITests.swift; sourceTree = "<group>"; };
 		ABAD63CD1C90163D00067484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABD5AF591CA11A53003C06E2 /* mh-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mh-Bridging-Header.h"; sourceTree = "<group>"; };
 		E574DF3527BA144FB4FED154 /* Pods-mh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mh.release.xcconfig"; path = "Pods/Target Support Files/Pods-mh/Pods-mh.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +143,7 @@
 			children = (
 				AB865D2A1C9FD21C004666FD /* CirCleView.swift */,
 				AB2F9F381C98294A00047520 /* UIColor+Extension.swift */,
+				ABD5AF591CA11A53003C06E2 /* mh-Bridging-Header.h */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -546,11 +548,14 @@
 			baseConfigurationReference = 5C1657AB89DCC704AE8EC425 /* Pods-mh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = mh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.itjh.mh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mh/mh-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -559,11 +564,13 @@
 			baseConfigurationReference = E574DF3527BA144FB4FED154 /* Pods-mh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = mh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.itjh.mh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mh/mh-Bridging-Header.h";
 			};
 			name = Release;
 		};
