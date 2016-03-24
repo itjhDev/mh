@@ -43,8 +43,8 @@ class HomeTableViewController: UITableViewController,  SDCycleScrollViewDelegate
         
         
         tableHeardView.placeholderImage = UIImage(named: "tutorial_background_03")
-        tableHeardView.autoScrollTimeInterval = 5
-        
+        tableHeardView.autoScrollTimeInterval = 4
+        tableHeardView.showPageControl = false
         tableHeardView.imageURLStringsGroup = urlImageArray
                 self.tableView.tableHeaderView = tableHeardView
 
