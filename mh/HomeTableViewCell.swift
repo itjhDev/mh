@@ -25,13 +25,26 @@ extension HomeTableViewCell: UICollectionViewDataSource {
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("movieCell", forIndexPath: indexPath) as! MovieCollectionViewCell
-
-        Log.info("https://o449xphwj.qnssl.com/img\(indexPath.row).jpg")
-
+        
         cell.movieImage.sd_setImageWithURL(NSURL(string: "https://o449xphwj.qnssl.com/img\(indexPath.row).jpg")!, placeholderImage: UIImage(named: "jgl600x849"))
 
         return cell
     }
+    
+    
+    
+}
+
+
+extension HomeTableViewCell: UICollectionViewDelegate{
+    
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        Log.info("点击了第\(indexPath.row)")
+        
+    }
+    
 }
 
 extension HomeTableViewCell: UICollectionViewDelegateFlowLayout {
@@ -42,4 +55,9 @@ extension HomeTableViewCell: UICollectionViewDelegateFlowLayout {
 
         return CGSize(width: itemWidth, height: itemHeight)
     }
+    
+    
+    
+    
+    
 }
