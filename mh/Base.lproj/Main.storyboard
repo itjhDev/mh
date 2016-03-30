@@ -115,6 +115,7 @@
                                                         <outlet property="cacegoryName" destination="GvA-MV-Ptk" id="Cgt-q2-4fF"/>
                                                         <outlet property="movieImage" destination="rDf-ci-U2W" id="WnD-g1-AW6"/>
                                                         <outlet property="movieName" destination="w4X-5v-dXg" id="p24-ih-fb1"/>
+                                                        <segue destination="czC-BR-xju" kind="show" id="dfz-88-I9v"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -175,10 +176,10 @@
             </objects>
             <point key="canvasLocation" x="3790" y="2028"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie Info View Controller-->
         <scene sceneID="W6q-GY-I60">
             <objects>
-                <viewController id="czC-BR-xju" sceneMemberID="viewController">
+                <viewController id="czC-BR-xju" customClass="MovieInfoViewController" customModule="mh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q1l-G1-rbQ"/>
                         <viewControllerLayoutGuide type="bottom" id="yxA-CR-fE4"/>
@@ -186,12 +187,24 @@
                     <view key="view" contentMode="scaleToFill" id="37K-RG-Jii">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电影详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNU-4V-3rA">
+                                <rect key="frame" x="266" y="289" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dNU-4V-3rA" firstAttribute="centerX" secondItem="37K-RG-Jii" secondAttribute="centerX" id="D1J-TM-hbP"/>
+                            <constraint firstItem="dNU-4V-3rA" firstAttribute="centerY" secondItem="37K-RG-Jii" secondAttribute="centerY" id="y2V-3q-Zm0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqX-Ke-Kfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3790" y="1398"/>
+            <point key="canvasLocation" x="3564" y="1187"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qZ8-JE-YZr">

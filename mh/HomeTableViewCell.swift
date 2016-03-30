@@ -20,7 +20,7 @@ class HomeTableViewCell: UITableViewCell {
 extension HomeTableViewCell: UICollectionViewDataSource {
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -42,6 +42,7 @@ extension HomeTableViewCell: UICollectionViewDelegate{
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         Log.info("点击了第\(indexPath.row)")
+        
         
     }
     

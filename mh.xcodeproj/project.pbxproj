@@ -21,6 +21,7 @@
 		ABAD63B61C90163D00067484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAD63B41C90163D00067484 /* LaunchScreen.storyboard */; };
 		ABAD63C11C90163D00067484 /* mhTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAD63C01C90163D00067484 /* mhTests.swift */; };
 		ABAD63CC1C90163D00067484 /* mhUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAD63CB1C90163D00067484 /* mhUITests.swift */; };
+		ABBE84941CABEF9B002BB462 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBE84931CABEF9B002BB462 /* MovieInfoViewController.swift */; };
 		E8C2C02DC027A21AB19FA555 /* Pods_mh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E3B5AFF9296F6259855AAD /* Pods_mh.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		ABAD63C71C90163D00067484 /* mhUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mhUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAD63CB1C90163D00067484 /* mhUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mhUITests.swift; sourceTree = "<group>"; };
 		ABAD63CD1C90163D00067484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABBE84931CABEF9B002BB462 /* MovieInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInfoViewController.swift; sourceTree = "<group>"; };
 		ABD5AF591CA11A53003C06E2 /* mh-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mh-Bridging-Header.h"; sourceTree = "<group>"; };
 		E574DF3527BA144FB4FED154 /* Pods-mh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mh.release.xcconfig"; path = "Pods/Target Support Files/Pods-mh/Pods-mh.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				AB3BC8351C929EDD002FCBB4 /* HomeTableViewController.swift */,
+				ABBE84931CABEF9B002BB462 /* MovieInfoViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABBE84941CABEF9B002BB462 /* MovieInfoViewController.swift in Sources */,
 				AB3BC8361C929EDD002FCBB4 /* HomeTableViewController.swift in Sources */,
 				ABAD63AE1C90163D00067484 /* ViewController.swift in Sources */,
 				AB3BC83B1C929FDA002FCBB4 /* MovieCollectionViewCell.swift in Sources */,
