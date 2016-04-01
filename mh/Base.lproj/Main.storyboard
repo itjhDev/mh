@@ -191,20 +191,29 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电影详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNU-4V-3rA">
                                 <rect key="frame" x="266" y="289" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.86666666670000003" green="0.82745098039999998" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jgl600x849" translatesAutoresizingMaskIntoConstraints="NO" id="rIS-N4-Fl8">
+                                <rect key="frame" x="11" y="72" width="110" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="Ez0-hH-ydq"/>
+                                    <constraint firstAttribute="height" constant="156" id="dkW-WR-0oK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dNU-4V-3rA" firstAttribute="centerX" secondItem="37K-RG-Jii" secondAttribute="centerX" id="D1J-TM-hbP"/>
+                            <constraint firstItem="rIS-N4-Fl8" firstAttribute="leading" secondItem="37K-RG-Jii" secondAttribute="leading" constant="11" id="PBW-Zi-R1b"/>
+                            <constraint firstItem="rIS-N4-Fl8" firstAttribute="top" secondItem="q1l-G1-rbQ" secondAttribute="bottom" constant="8" id="vya-xb-UOp"/>
                             <constraint firstItem="dNU-4V-3rA" firstAttribute="centerY" secondItem="37K-RG-Jii" secondAttribute="centerY" id="y2V-3q-Zm0"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqX-Ke-Kfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3564" y="1187"/>
+            <point key="canvasLocation" x="3790" y="1235"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qZ8-JE-YZr">
@@ -310,7 +319,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0wu-Xc-ebr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="2S2-b2-MEd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="2S2-b2-MEd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
