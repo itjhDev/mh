@@ -10,6 +10,7 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -188,12 +189,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电影详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNU-4V-3rA">
-                                <rect key="frame" x="266" y="289" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.86666666670000003" green="0.82745098039999998" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jgl600x849" translatesAutoresizingMaskIntoConstraints="NO" id="rIS-N4-Fl8">
                                 <rect key="frame" x="11" y="72" width="110" height="156"/>
                                 <constraints>
@@ -201,13 +196,23 @@
                                     <constraint firstAttribute="height" constant="156" id="dkW-WR-0oK"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oex-1l-tyP">
+                                <rect key="frame" x="132" y="72" width="211" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="4ep-aY-niX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="dNU-4V-3rA" firstAttribute="centerX" secondItem="37K-RG-Jii" secondAttribute="centerX" id="D1J-TM-hbP"/>
                             <constraint firstItem="rIS-N4-Fl8" firstAttribute="leading" secondItem="37K-RG-Jii" secondAttribute="leading" constant="11" id="PBW-Zi-R1b"/>
+                            <constraint firstItem="Oex-1l-tyP" firstAttribute="top" secondItem="q1l-G1-rbQ" secondAttribute="bottom" constant="8" id="d5c-Y2-t5e"/>
+                            <constraint firstAttribute="trailing" secondItem="Oex-1l-tyP" secondAttribute="trailing" constant="257" id="lTt-zl-oJc"/>
+                            <constraint firstItem="Oex-1l-tyP" firstAttribute="leading" secondItem="rIS-N4-Fl8" secondAttribute="trailing" constant="11" id="qA5-BX-LXe"/>
                             <constraint firstItem="rIS-N4-Fl8" firstAttribute="top" secondItem="q1l-G1-rbQ" secondAttribute="bottom" constant="8" id="vya-xb-UOp"/>
-                            <constraint firstItem="dNU-4V-3rA" firstAttribute="centerY" secondItem="37K-RG-Jii" secondAttribute="centerY" id="y2V-3q-Zm0"/>
                         </constraints>
                     </view>
                 </viewController>

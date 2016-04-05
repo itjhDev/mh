@@ -22,9 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Log.enabled = true
         Log.formatter = .Default
         Log.theme = .Dusk
-    
-        				
-        
         
         return true
     }
