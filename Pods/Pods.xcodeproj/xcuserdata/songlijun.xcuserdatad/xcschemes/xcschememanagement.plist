@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Log.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -14,12 +19,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SDCycleScrollView.xcscheme</key>
+		<key>YYCache.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SDWebImage.xcscheme</key>
+		<key>YYImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,17 +42,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8170527D730359666E0F3266D5B03D30</key>
+		<key>08DB2E88DFF3AF27D1EABE8F1356D3A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D86AED0190BB36F2A5893DE721E04010</key>
+		<key>17CD97C19C28AB28F7D1D952B8B2957D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F2A8F1BAE26A130C52A22CA8F9C521A6</key>
+		<key>28B21C937C45C2590E87A76731E529B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5276298AD5D1B9225B6BB4E81CD9D3D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

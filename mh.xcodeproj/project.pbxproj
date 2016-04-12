@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1DFF171CBCDB3400C5747F /* JMCarouselCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1DFF151CBCDB3400C5747F /* JMCarouselCollection.swift */; };
+		AB1DFF181CBCDB3400C5747F /* JMCarouselScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1DFF161CBCDB3400C5747F /* JMCarouselScrollView.swift */; };
 		AB2F9F391C98294A00047520 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2F9F381C98294A00047520 /* UIColor+Extension.swift */; };
 		AB3BC8361C929EDD002FCBB4 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BC8351C929EDD002FCBB4 /* HomeTableViewController.swift */; };
 		AB3BC8391C929F66002FCBB4 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BC8381C929F66002FCBB4 /* HomeTableViewCell.swift */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		35E3B5AFF9296F6259855AAD /* Pods_mh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1657AB89DCC704AE8EC425 /* Pods-mh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mh/Pods-mh.debug.xcconfig"; sourceTree = "<group>"; };
+		AB1DFF151CBCDB3400C5747F /* JMCarouselCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMCarouselCollection.swift; sourceTree = "<group>"; };
+		AB1DFF161CBCDB3400C5747F /* JMCarouselScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMCarouselScrollView.swift; sourceTree = "<group>"; };
 		AB2F9F381C98294A00047520 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		AB3BC8351C929EDD002FCBB4 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		AB3BC8381C929F66002FCBB4 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -113,6 +117,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AB1DFF141CBCDB3400C5747F /* JMCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				AB1DFF151CBCDB3400C5747F /* JMCarouselCollection.swift */,
+				AB1DFF161CBCDB3400C5747F /* JMCarouselScrollView.swift */,
+			);
+			path = JMCarousel;
+			sourceTree = "<group>";
+		};
 		AB3BC8341C929EBF002FCBB4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +155,7 @@
 		AB626BCD1C9673CD0017239B /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				AB1DFF141CBCDB3400C5747F /* JMCarousel */,
 				AB2F9F381C98294A00047520 /* UIColor+Extension.swift */,
 				ABD5AF591CA11A53003C06E2 /* mh-Bridging-Header.h */,
 			);
@@ -407,6 +421,8 @@
 				AB3BC83B1C929FDA002FCBB4 /* MovieCollectionViewCell.swift in Sources */,
 				AB2F9F391C98294A00047520 /* UIColor+Extension.swift in Sources */,
 				AB3BC8391C929F66002FCBB4 /* HomeTableViewCell.swift in Sources */,
+				AB1DFF181CBCDB3400C5747F /* JMCarouselScrollView.swift in Sources */,
+				AB1DFF171CBCDB3400C5747F /* JMCarouselCollection.swift in Sources */,
 				ABAD63AC1C90163D00067484 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

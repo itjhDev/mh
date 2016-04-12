@@ -84,12 +84,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/Log/Log.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/SDCycleScrollView/SDCycleScrollView.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/SDWebImage/SDWebImage.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/YYCache/YYCache.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/YYImage/YYImage.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/YYWebImage/YYWebImage.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/Log/Log.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/SDCycleScrollView/SDCycleScrollView.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/SDWebImage/SDWebImage.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/YYCache/YYCache.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/YYImage/YYImage.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/YYWebImage/YYWebImage.framework"
 fi

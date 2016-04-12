@@ -1,20 +1,26 @@
 PODS:
+  - Alamofire (3.3.1)
   - Log (0.2.1)
-  - SDCycleScrollView (1.61):
-    - SDWebImage (~> 3.7)
-  - SDWebImage (3.7.5):
-    - SDWebImage/Core (= 3.7.5)
-  - SDWebImage/Core (3.7.5)
+  - YYCache (1.0.3)
+  - YYImage (1.0.1):
+    - YYImage/Core (= 1.0.1)
+  - YYImage/Core (1.0.1)
+  - YYWebImage (1.0.3):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
+  - Alamofire
   - Log
-  - SDCycleScrollView
+  - YYWebImage
 
 SPEC CHECKSUMS:
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   Log: b97ca4e92642f49600ea4dddfd3e238ca14a3b7a
-  SDCycleScrollView: a002d85b30cfa9d0ac74069cd3973ca19ff4f22f
-  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
+  YYImage: b41b45bc5f32bfcdf67bdfb9c09da9e9832357c0
+  YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
 
-PODFILE CHECKSUM: 9df5342af26be237356712d3fc7691f9605d5fb4
+PODFILE CHECKSUM: 843eaf2b0cabb5b44e8f9a884b075db054ab2d22
 
 COCOAPODS: 1.0.0.beta.4

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Log
+import Alamofire
 
 class MovieInfoViewController: UIViewController {
 
@@ -35,6 +37,41 @@ class MovieInfoViewController: UIViewController {
 
     }
     
+    @IBAction func downMovie(sender: UIButton) {
+        
+        let destination = Alamofire.Request.suggestedDownloadDestination(directory: .DocumentDirectory, domain: .UserDomainMask)
+        
+//        https://dn-itjhcdn.qbox.me/720PAtPrestonCastle.mp4 
+        
+       
+        Alamofire.download(.GET, "ftp://ygdy8:ygdy8@y153.dydytt.net:8058/[%e9%98%b3%e5%85%89%e7%94%b5%e5%bd%b1www.ygdy8.com].%e6%b2%99%e6%bc%a0%e5%a5%b3%e7%8e%8b.BD.720p.%e4%b8%ad%e8%8b%b1%e5%8f%8c%e5%ad%97%e5%b9%95.rmvb", destination: destination)
+            .progress { bytesRead, totalBytesRead, totalBytesExpectedToRead in
+                print(totalBytesRead)
+                
+                // This closure is NOT called on the main queue for performance
+                // reasons. To update your ui, dispatch to the main queue.
+                dispatch_async(dispatch_get_main_queue()) {
+                    print("Total bytes read on main queue: \(totalBytesRead)")
+                }
+                
+                let percent = totalBytesRead*100/totalBytesExpectedToRead
+                
+                print("已下载：\(totalBytesRead)  当前进度：\(percent)%")
+            }
+            .response { _, _, _, error in
+                if let error = error {
+                    print("Failed with error: \(error)")
+                } else {
+                    print("Downloaded file successfully")
+                }
+        }
+        
+        let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        
+        Log.info(path)
+        
+        Log.info("下载电影")
+    }
 
     /*
     // MARK: - Navigation

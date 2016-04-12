@@ -4,9 +4,13 @@ use_frameworks!
 
 def mh_ios 
     
-    pod 'SDCycleScrollView'
+#    pod 'SDCycleScrollView'
 
     pod 'Log'
+    
+    pod 'Alamofire'
+    
+    pod 'YYWebImage'
 
 end
 

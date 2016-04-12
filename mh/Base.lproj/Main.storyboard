@@ -206,19 +206,19 @@
                                 <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="Wbv-Qo-stW">
-                                <rect key="frame" x="530" y="178" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="6fu-ol-MLN"/>
-                                    <constraint firstAttribute="width" constant="50" id="bj2-ih-sNg"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pld-g7-R78">
+                                <rect key="frame" x="550" y="198" width="30" height="30"/>
+                                <state key="normal" title="下载"/>
+                                <connections>
+                                    <action selector="downMovie:" destination="czC-BR-xju" eventType="touchUpInside" id="ARV-7R-k63"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Oex-1l-tyP" firstAttribute="leading" secondItem="rIS-N4-Fl8" secondAttribute="trailing" constant="11" id="1H9-c4-GyQ"/>
-                            <constraint firstItem="Wbv-Qo-stW" firstAttribute="top" secondItem="q1l-G1-rbQ" secondAttribute="bottom" constant="114" id="9LH-CF-mGg"/>
-                            <constraint firstAttribute="trailing" secondItem="Wbv-Qo-stW" secondAttribute="trailing" constant="20" id="XCa-zc-zg9"/>
+                            <constraint firstAttribute="trailing" secondItem="pld-g7-R78" secondAttribute="trailing" constant="20" id="9EF-XW-Xqc"/>
+                            <constraint firstItem="pld-g7-R78" firstAttribute="top" secondItem="q1l-G1-rbQ" secondAttribute="bottom" constant="134" id="AAB-Hl-TSN"/>
                             <constraint firstItem="Oex-1l-tyP" firstAttribute="top" secondItem="q1l-G1-rbQ" secondAttribute="bottom" constant="8" id="XVH-ER-Ynb"/>
                             <constraint firstItem="rIS-N4-Fl8" firstAttribute="leading" secondItem="37K-RG-Jii" secondAttribute="leading" constant="11" id="dEt-Kg-lqm"/>
                             <constraint firstItem="rIS-N4-Fl8" firstAttribute="top" secondItem="q1l-G1-rbQ" secondAttribute="bottom" constant="8" id="yPL-l7-ZjZ"/>
@@ -350,6 +350,5 @@
     <resources>
         <image name="jgl600x849" width="600" height="849"/>
         <image name="more_than" width="20" height="20"/>
-        <image name="play" width="50" height="50"/>
     </resources>
 </document>

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 import Log
 
@@ -26,7 +25,10 @@ extension HomeTableViewCell: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("movieCell", forIndexPath: indexPath) as! MovieCollectionViewCell
         
-        cell.movieImage.sd_setImageWithURL(NSURL(string: "https://o449xphwj.qnssl.com/img\(indexPath.row).jpg")!, placeholderImage: UIImage(named: "jgl600x849"))
+//        cell.movieImage.sd_setImageWithURL(NSURL(string: "https://o449xphwj.qnssl.com/img\(indexPath.row).jpg")!, placeholderImage: UIImage(named: "jgl600x849"))
+        
+
+        cell.movieImage.yy_setImageWithURL(NSURL(string: "https://o449xphwj.qnssl.com/img\(indexPath.row).jpg")!, options: [.ProgressiveBlur,.SetImageWithFadeAnimation])
 
         return cell
     }
