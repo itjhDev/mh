@@ -17,17 +17,10 @@ class HomeTableViewController: UITableViewController, JMDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        headerView?.delegate = self
-    
     }
     
     
-    func carouselCollection(carouselCollection: JMCarouselCollection, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-        print("dasd")
-    }
-    
+  
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -47,10 +40,19 @@ class HomeTableViewController: UITableViewController, JMDelegate{
             pagePointColor: UIColor.whiteColor(),
             stepTime: 2.0)
         
+        headerView?.delegate = self
+        
 
         
         self.tableView.tableHeaderView = headerView
     }
+    
+    func carouselCollection(carouselCollection: JMCarouselCollection, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        print("点击了\(indexPath.item)")
+        
+    }
+    
     
 
     override func didReceiveMemoryWarning() {

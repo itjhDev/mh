@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol JMDelegate:UICollectionViewDelegate {
+protocol JMDelegate: class {
     
     func carouselCollection(carouselCollection: JMCarouselCollection, didSelectItemAtIndexPath indexPath: NSIndexPath)
     
@@ -38,50 +38,16 @@ class JMCarouselCollection: UIView,UICollectionViewDelegate,UICollectionViewData
     //图片url数组
     private var imgURLArray:[String]?
     
-    var delegate: JMDelegate?
-
+    weak var delegate: JMDelegate?
     
-//    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-//        
-////        print("点击了\(indexPath.row)")
-//        
-//        delegate?.collectionView(collectionView, didSelectItemAtIndexPath: indexPath)
-//    }
-////
-
-    
-//    
-//    - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-//    {
-//    if ([self.delegate respondsToSelector:@selector(cycleScrollView:didSelectItemAtIndex:)]) {
-//    [self.delegate cycleScrollView:self didSelectItemAtIndex:indexPath.item % self.imagePathsGroup.count];
-//    }
-//    if (self.clickItemOperationBlock) {
-//    self.clickItemOperationBlock(indexPath.item % self.imagePathsGroup.count);
-//    }
-//    }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        
-        if ((self.delegate?.respondsToSelector(Selector("carouselCollection:didSelectItemAtIndex:"))) != nil) {
-            
-            self.delegate?.carouselCollection(self, didSelectItemAtIndexPath: indexPath)
-
-        }
-        
-    
-//        if self.clickItemOperationBlock(indexPath.row) {
-            self.clickItemOperationBlock(indexPath.item)
-//        }
+        self.delegate?.carouselCollection(self, didSelectItemAtIndexPath: NSIndexPath(forItem: indexPath.item % self.imgURLArray!.count, inSection: indexPath.section))
         
     }
     
     
-//    @property (nonatomic, copy) void (^clickItemOperationBlock)(NSInteger currentIndex);
-
-    
-    func clickItemOperationBlock(currentIndex: NSInteger) -> Void {}
     
     
     //MARK: - 初始化方法
