@@ -114,7 +114,7 @@ class JMCarouselScrollView: UIView,UIScrollViewDelegate
         //设置一开始偏移量
         ScrollView.contentOffset = CGPointMake(sWidth , 0);
         
-        //设置timer
+        //设置timer 
         setTheTimer()
         //设置图片
         prepareImage()

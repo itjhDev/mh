@@ -13,7 +13,7 @@ class HomeTableViewController: UITableViewController, JMDelegate{
 
     let headNames = ["新品推荐", "新增电影", "热门电影"]
     
-    var headerView: JMCarouselCollection?
+    var headerView: JMCarouselCollection!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +40,8 @@ class HomeTableViewController: UITableViewController, JMDelegate{
             pagePointColor: UIColor.whiteColor(),
             stepTime: 2.0)
         
-        headerView?.delegate = self
-        
+        headerView.delegate = self
+
 
         
         self.tableView.tableHeaderView = headerView
@@ -65,12 +65,6 @@ class HomeTableViewController: UITableViewController, JMDelegate{
     }
     
     
-    func selectItemAtIndex(pageView: JMCarouselCollection, didSelectedPageAtIndex index: NSInteger) {
-        
-        
-        print(";;;")
-        
-    }
 }
 
 extension HomeTableViewController {
