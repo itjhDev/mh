@@ -18,50 +18,17 @@ class MHTabbarViewController: UITabBarController {
 
             switch self {
             case .Home:
-                return NSLocalizedString("Home1", comment: "")
+                return NSLocalizedString("Home3", comment: "")
             }
         }
     }
 
     private var previousTab = Tab.Home
 
-    private var checkDoubleTapOnHomeTimer: NSTimer?
-
-    private var hasFirstTapOnFeedsWhenItIsAtTop = false {
-        willSet {
-            if newValue {
-                let timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(MHTabbarViewController.checkDoubleTapOnFeeds(_:)), userInfo: nil, repeats: false)
-                checkDoubleTapOnHomeTimer = timer
-            } else {
-                checkDoubleTapOnHomeTimer?.invalidate()
-            }
-        }
-    }
-
-    @objc private func checkDoubleTapOnFeeds(timer: NSTimer) {
-
-        hasFirstTapOnFeedsWhenItIsAtTop = false
-    }
-
-    private struct Listener {
-        static let lauchStyle = "YepTabBarController.lauchStyle"
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         delegate = self
-
-        // Set Titles
-
-        if let items = tabBar.items {
-            for i in 0 ..< items.count {
-                let item = items[i]
-                item.title = Tab(rawValue: i)?.title
-            }
-        }
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,47 +41,72 @@ class MHTabbarViewController: UITabBarController {
 
 extension MHTabbarViewController: UITabBarControllerDelegate {
 
+//    /**
+//     设置双击tabbar回到顶部
+//
+////     */
     func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
 
-        guard
-        let tab = Tab(rawValue: selectedIndex),
-            let nvc = viewController as? UINavigationController else {
+        let vc = self.tabBarController?.selectedViewController
+
+        print("vc-> \(vc)")
+
+        print("select-tag \(tabBarController.tabBar.selectedItem!.tag)")
+        print("selectedIndex \(self.selectedIndex)")
+        print("---------------------------")
+
+        if tabBarController.tabBar.selectedItem!.tag == 0 && self.selectedIndex == 0 {
+            let nvc = viewController as! UINavigationController
+            let hTableV = nvc.topViewController as! HomeTableViewController
+
+            /// 确定只有在当前选择tabbar中点击才有效
+            if viewController.isEqual(nvc) == true {
+                UIView.animateWithDuration(0.25, animations: { () -> Void in
+                    // 回到最上方
+                    print("回到顶部!")
+                    hTableV.tableView.contentOffset = CGPointMake(0, -55)
+                })
 
                 return false
+            }
+            else {
+
+                return true
+            }
         }
 
-        if tab != previousTab {
-            return true
-        }
-        
-        if case .Home = tab {
-//           hasFirstTapOnFeedsWhenItIsAtTop = true
+//        let nvc = viewController as! UINavigationController
+//       let hTableV =  nvc.topViewController as! HomeTableViewController
+//
+//
+//        /// 确定只有在当前选择tabbar中点击才有效
+//        if viewController.isEqual(nvc) == true {
+//            UIView.animateWithDuration(0.25, animations: { () -> Void in
+//                // 回到最上方
+//
+//                hTableV.tableView.contentOffset = CGPointMake(0, -55)
+//            })
+//
 //            return false
-        }
-        
+//        }
+//        else {
+//
+//            return true
+//        }
+
         return true
     }
 
     func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
 
-        guard
-        let tab = Tab(rawValue: selectedIndex),
-            let nvc = viewController as? UINavigationController else {
-                return
-        }
+        print("didSelectViewController -> \(tabBarController.tabBar.tag)")
+    }
 
-        // 不相等才继续，确保第一次 tap 不做事
+    override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
 
-        if tab != previousTab {
-            previousTab = tab
-            return
-        }
-
-        switch tab {
-        case .Home:
-            print("双击")
-            hasFirstTapOnFeedsWhenItIsAtTop = false
-        }
+//        print("select-tag \(item.tag)")
+//        print("selectedIndex \(self.selectedIndex)")
+//        print("---------------------------")
     }
 }
 
