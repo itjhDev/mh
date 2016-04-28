@@ -25,6 +25,7 @@
 		ABAD63C11C90163D00067484 /* mhTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAD63C01C90163D00067484 /* mhTests.swift */; };
 		ABAD63CC1C90163D00067484 /* mhUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAD63CB1C90163D00067484 /* mhUITests.swift */; };
 		ABBE84941CABEF9B002BB462 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBE84931CABEF9B002BB462 /* MovieInfoViewController.swift */; };
+		ABC6DDC61CCF8B2E004A4239 /* DAExpandAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6DDC51CCF8B2E004A4239 /* DAExpandAnimation.swift */; };
 		E8C2C02DC027A21AB19FA555 /* Pods_mh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E3B5AFF9296F6259855AAD /* Pods_mh.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		ABAD63CB1C90163D00067484 /* mhUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mhUITests.swift; sourceTree = "<group>"; };
 		ABAD63CD1C90163D00067484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABBE84931CABEF9B002BB462 /* MovieInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInfoViewController.swift; sourceTree = "<group>"; };
+		ABC6DDC51CCF8B2E004A4239 /* DAExpandAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAExpandAnimation.swift; sourceTree = "<group>"; };
 		ABD5AF591CA11A53003C06E2 /* mh-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mh-Bridging-Header.h"; sourceTree = "<group>"; };
 		E574DF3527BA144FB4FED154 /* Pods-mh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mh.release.xcconfig"; path = "Pods/Target Support Files/Pods-mh/Pods-mh.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +160,7 @@
 		AB626BCD1C9673CD0017239B /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				ABC6DDC51CCF8B2E004A4239 /* DAExpandAnimation.swift */,
 				AB1DFF141CBCDB3400C5747F /* JMCarousel */,
 				AB2F9F381C98294A00047520 /* UIColor+Extension.swift */,
 				ABD5AF591CA11A53003C06E2 /* mh-Bridging-Header.h */,
@@ -436,6 +439,7 @@
 				AB1DFF181CBCDB3400C5747F /* JMCarouselScrollView.swift in Sources */,
 				AB1DFF171CBCDB3400C5747F /* JMCarouselCollection.swift in Sources */,
 				ABAD63AC1C90163D00067484 /* AppDelegate.swift in Sources */,
+				ABC6DDC61CCF8B2E004A4239 /* DAExpandAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

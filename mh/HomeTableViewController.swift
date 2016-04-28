@@ -9,7 +9,7 @@
 import UIKit
 import Log
 
-class HomeTableViewController: UITableViewController, JMDelegate{
+class HomeTableViewController: UITableViewController, JMDelegate,UIViewControllerTransitioningDelegate{
 
     let headNames = ["新品推荐", "新增电影", "热门电影"]
     
