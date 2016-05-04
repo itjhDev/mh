@@ -1,6 +1,8 @@
 PODS:
   - Alamofire (3.3.1)
   - Log (0.2.1)
+  - pop (1.0.9)
+  - Spring (1.0.3)
   - YYCache (1.0.3)
   - YYImage (1.0.1):
     - YYImage/Core (= 1.0.1)
@@ -12,15 +14,29 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Log
+  - pop (~> 1.0)
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
   - YYWebImage
+
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift2
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 18d5c7b74489de8044e34767f856d1e574f0820e
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   Log: b97ca4e92642f49600ea4dddfd3e238ca14a3b7a
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
   YYImage: b41b45bc5f32bfcdf67bdfb9c09da9e9832357c0
   YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
 
-PODFILE CHECKSUM: 843eaf2b0cabb5b44e8f9a884b075db054ab2d22
+PODFILE CHECKSUM: 7f296dc783b4b375c06debd435f48510a6c10e93
 
-COCOAPODS: 1.0.0.beta.4
+COCOAPODS: 1.0.0.beta.6

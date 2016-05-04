@@ -9,8 +9,10 @@
 import UIKit
 import Log
 import Alamofire
+import Spring
 
 class MovieInfoViewController: UIViewController {
+    @IBOutlet var infoView: SpringView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,9 @@ class MovieInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
         
 //        self.navigationController?.navigationBar.backgroundColor = UIColor.blackColor()
+        
+        
+//        infoView.animate()
         
     }
 

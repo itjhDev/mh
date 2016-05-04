@@ -10,18 +10,16 @@ import UIKit
 
 import Log
 
+import SpriteKit
+
 class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    private let animationController = DAExpandAnimation()
-
+//    @IBOutlet weak var collectionView: SpringView!
 }
 
 extension HomeTableViewCell: UICollectionViewDataSource {
-    
-
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
@@ -29,42 +27,43 @@ extension HomeTableViewCell: UICollectionViewDataSource {
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("movieCell", forIndexPath: indexPath) as! MovieCollectionViewCell
-        
 
-        cell.movieImage.yy_setImageWithURL(NSURL(string: "https://o449xphwj.qnssl.com/img\(indexPath.row).jpg")!, options: [.ProgressiveBlur,.SetImageWithFadeAnimation])
+        cell.movieImage.yy_setImageWithURL(NSURL(string: "https://o449xphwj.qnssl.com/img\(indexPath.row).jpg")!, options: [.ProgressiveBlur, .SetImageWithFadeAnimation])
+
+//        cell.movieImage.animation = "pop"
+//        cell.movieImage.curve = "spring"
+//        cell.movieImage.duration = 1.0
+//        cell.movieImage.animate()
 
         return cell
     }
-    
-    
 }
 
+extension HomeTableViewCell: UICollectionViewDelegate {
 
-extension HomeTableViewCell: UICollectionViewDelegate{
-    
-    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
+
         Log.info("点击了第\(indexPath.row)")
-        
-        
-        animationController.collapsedViewFrame = {
-            Log.info("ddd")
-            return self.frame
-        }
-        
-        animationController.animationDuration = 1.0
-        
-        collectionView.deselectItemAtIndexPath(indexPath, animated: true)
-        
-    }
-    
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return animationController
-    }
-    
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return animationController
+
+//        self.collectionView.animation = "pop"
+//
+//        self.collectionView.curve = "spring"
+//
+//        self.collectionView.duration = 2.0
+//
+//        self.collectionView.animate()
+
+//        self.collectionView.
+
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! MovieCollectionViewCell
+
+        cell.movieImage.animation = "pop"
+        cell.movieImage.curve = "spring"
+        cell.movieImage.duration = 2.0 // 速度
+//        cell.movieImage.scaleX = 1
+//        cell.movieImage.scaleY = 1
+        cell.movieImage.force = 0.5 // 幅度
+        cell.movieImage.animate()
     }
 }
 
@@ -76,5 +75,4 @@ extension HomeTableViewCell: UICollectionViewDelegateFlowLayout {
 
         return CGSize(width: itemWidth, height: itemHeight)
     }
-    
 }

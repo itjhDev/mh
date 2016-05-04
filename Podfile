@@ -11,6 +11,11 @@ def mh_ios
     pod 'Alamofire'
     
     pod 'YYWebImage'
+    
+    pod 'pop', '~> 1.0'
+    
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
+
 
 end
 

@@ -7,10 +7,13 @@
 //
 
 import UIKit
-
+import Spring
 class MovieCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var movieImage: UIImageView!
+//    @IBOutlet weak var movieImage: UIImageView!
+    
+    @IBOutlet weak var movieImage: SpringImageView!
+
     
     @IBOutlet weak var movieName: UILabel!
     

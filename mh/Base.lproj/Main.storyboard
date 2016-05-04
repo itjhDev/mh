@@ -31,7 +31,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-At-u03">
-                                            <rect key="frame" x="0.0" y="50" width="600" height="235.5"/>
+                                            <rect key="frame" x="0.0" y="50" width="600" height="235"/>
                                             <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C83-iR-uEm">
                                                 <size key="itemSize" width="110" height="238.5"/>
@@ -41,15 +41,12 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="9va-GU-3Pp" customClass="MovieCollectionViewCell" customModule="mh" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="-1.5" width="110" height="238.5"/>
+                                                    <rect key="frame" x="10" y="-2" width="110" height="238.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                         <rect key="frame" x="0.0" y="0.0" width="110" height="238.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jgl600x849" translatesAutoresizingMaskIntoConstraints="NO" id="rDf-ci-U2W">
-                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="156"/>
-                                                            </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4X-5v-dXg">
                                                                 <rect key="frame" x="0.0" y="161" width="88" height="30"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
@@ -57,11 +54,14 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GvA-MV-Ptk">
-                                                                <rect key="frame" x="0.0" y="196.5" width="89" height="16.5"/>
+                                                                <rect key="frame" x="0.0" y="197" width="89" height="16"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
                                                                 <color key="textColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jgl600x849" translatesAutoresizingMaskIntoConstraints="NO" id="rDf-ci-U2W" customClass="SpringImageView" customModule="Spring">
+                                                                <rect key="frame" x="0.0" y="-1" width="110" height="157"/>
+                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </view>
@@ -71,7 +71,6 @@
                                                         <outlet property="cacegoryName" destination="GvA-MV-Ptk" id="Cgt-q2-4fF"/>
                                                         <outlet property="movieImage" destination="rDf-ci-U2W" id="WnD-g1-AW6"/>
                                                         <outlet property="movieName" destination="w4X-5v-dXg" id="p24-ih-fb1"/>
-                                                        <segue destination="czC-BR-xju" kind="show" id="dfz-88-I9v"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -81,7 +80,7 @@
                                             </connections>
                                         </collectionView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUg-gI-7Do">
-                                            <rect key="frame" x="12" y="15" width="40.5" height="21"/>
+                                            <rect key="frame" x="12" y="15" width="41" height="21"/>
                                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -138,12 +137,12 @@
         <!--Movie Info View Controller-->
         <scene sceneID="W6q-GY-I60">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="czC-BR-xju" customClass="MovieInfoViewController" customModule="mh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieInfoViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="czC-BR-xju" customClass="MovieInfoViewController" customModule="mh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q1l-G1-rbQ"/>
                         <viewControllerLayoutGuide type="bottom" id="yxA-CR-fE4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="37K-RG-Jii">
+                    <view key="view" contentMode="scaleToFill" id="37K-RG-Jii" customClass="SpringView" customModule="Spring">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -154,8 +153,15 @@
                                     <constraint firstAttribute="height" constant="156" id="e7i-v0-BZt"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金刚侠" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oex-1l-tyP">
-                                <rect key="frame" x="132" y="72" width="211" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pld-g7-R78">
+                                <rect key="frame" x="550" y="198" width="30" height="30"/>
+                                <state key="normal" title="下载"/>
+                                <connections>
+                                    <action selector="downMovie:" destination="czC-BR-xju" eventType="touchUpInside" id="ARV-7R-k63"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="金刚侠" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oex-1l-tyP">
+                                <rect key="frame" x="129" y="72" width="211" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Ae3-gu-8Q5"/>
                                     <constraint firstAttribute="width" constant="211" id="HpY-Em-bDx"/>
@@ -164,13 +170,6 @@
                                 <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pld-g7-R78">
-                                <rect key="frame" x="550" y="198" width="30" height="30"/>
-                                <state key="normal" title="下载"/>
-                                <connections>
-                                    <action selector="downMovie:" destination="czC-BR-xju" eventType="touchUpInside" id="ARV-7R-k63"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -181,23 +180,30 @@
                             <constraint firstItem="rIS-N4-Fl8" firstAttribute="leading" secondItem="37K-RG-Jii" secondAttribute="leading" constant="11" id="dEt-Kg-lqm"/>
                             <constraint firstItem="rIS-N4-Fl8" firstAttribute="top" secondItem="q1l-G1-rbQ" secondAttribute="bottom" constant="8" id="yPL-l7-ZjZ"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideUp"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeInBack"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="infoView" destination="37K-RG-Jii" id="vxn-2R-0OV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqX-Ke-Kfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5508" y="872"/>
+            <point key="canvasLocation" x="4478" y="841"/>
         </scene>
         <!--Home-->
         <scene sceneID="PaR-ca-jnv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0wu-Xc-ebr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="GU0-S5-v53">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" red="0.090196078431372548" green="0.098039215686274508" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="GU0-S5-v53"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="2S2-b2-MEd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
